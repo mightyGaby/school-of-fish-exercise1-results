@@ -45,12 +45,13 @@
                 </div>
                 <div class="col-1-4">
                     <img data-ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png" />
-                    <p>{{forecast.weather[0].description}}</p>
+                    <p>{{forecast.weather[0].main}}</p>
                 </div>
                 <div class="col-1-2">
                     High: {{forecast.main.temp_max}} <sup>o</sup>{{::weather.units === 'metric' ? 'C' : 'F'}}<br/>
                     Low: {{forecast.main.temp_min}} <sup>o</sup>{{::weather.units === 'metric' ? 'C' : 'F'}}<br/>
-                    Humidity: {{forecast.main.humidity}}%
+                    Humidity: {{forecast.main.humidity}}%<br/>
+                    Wind: {{forecast.wind.speed}} {{::weather.units === 'metric' ? 'meter/sec' : 'miles/hour'}}<br/>
                 </div>
             </div>
         </article>
